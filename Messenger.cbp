@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Messenger" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Messenger" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="GLFW3" />
+					<Add library="opengl32" />
+					<Add library="gdi32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Messenger" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static-libstdc++ -static-libgcc" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-DWIN32" />
+			<Add option="-DTD2PLAY" />
+			<Add directory="td2play/simulator/include" />
+			<Add directory="td2play/simulator/GLFW-3/include" />
+			<Add directory="Messenger" />
+			<Add directory="C:/Program Files (x86)/OpenAL 1.1 SDK/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libstdc++ -static-libgcc" />
+			<Add library="GLFW3" />
+			<Add library="opengl32" />
+			<Add library="gdi32" />
+			<Add library="OpenAL32" />
+			<Add directory="td2play/simulator/bin/Debug" />
+			<Add directory="C:/Program Files (x86)/OpenAL 1.1 SDK/libs/Win32" />
+		</Linker>
+		<ExtraCommands>
+			<Add before="prebuild.bat" />
+			<Add before="td2play\external\sync.bat" />
+			<Mode after="always" />
+		</ExtraCommands>
+		<Unit filename="Messenger/Messenger.cpp" />
+		<Unit filename="Messenger/asset_tilemap.cpp" />
+		<Unit filename="Messenger/asset_tilemap.h" />
+		<Unit filename="Messenger/font_asset.cpp" />
+		<Unit filename="Messenger/font_asset.h" />
+		<Unit filename="Messenger/game_common.cpp" />
+		<Unit filename="Messenger/game_common.h" />
+		<Unit filename="Messenger/image_data.cpp" />
+		<Unit filename="Messenger/image_data.h" />
+		<Unit filename="td2play/simulator/src/Main.cpp" />
+		<Unit filename="td2play/srclib/lib_FixedMath.cpp" />
+		<Unit filename="td2play/srclib/lib_FixedMath.h" />
+		<Unit filename="td2play/srclib/lib_RenderBuffer.cpp" />
+		<Unit filename="td2play/srclib/lib_RenderBuffer.h" />
+		<Unit filename="td2play/srclib/lib_StringBuffer.cpp" />
+		<Unit filename="td2play/srclib/lib_StringBuffer.h" />
+		<Unit filename="td2play/srclib/lib_font_virtualdj.h" />
+		<Unit filename="td2play/srclib/lib_geom.h" />
+		<Unit filename="td2play/srclib/lib_hxcmod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="td2play/srclib/lib_image.h" />
+		<Unit filename="td2play/srclib/lib_input.cpp" />
+		<Unit filename="td2play/srclib/lib_input.h" />
+		<Unit filename="td2play/srclib/lib_math.cpp" />
+		<Unit filename="td2play/srclib/lib_math.h" />
+		<Unit filename="td2play/srclib/lib_sound.cpp" />
+		<Unit filename="td2play/srclib/lib_sound.h" />
+		<Unit filename="td2play/srclib/lib_spritefont.h" />
+		<Unit filename="td2play/srclib/lib_spritefont_structs.h" />
+		<Unit filename="td2play/srclib/lib_storage.cpp" />
+		<Unit filename="td2play/srclib/lib_storage.h" />
+		<Unit filename="td2play/srclib/lib_tilemap.cpp" />
+		<Unit filename="td2play/srclib/lib_tilemap.h" />
+		<Unit filename="td2play/srclib/test_FixedMath.h" />
+		<Unit filename="td2play/srclib/test_math.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
